@@ -1,0 +1,8 @@
+SELECT dem.firstname,Gender, salary,
+SUM(salary) 
+over (order by dem.employeeid) as total
+from EmployeeDemographics dem
+JOIN EmployeeSalary sal
+	on dem.EmployeeID = sal.EmployeeID
+
+	
